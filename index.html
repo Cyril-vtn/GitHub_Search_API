@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/root.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | GitHub user search app</title>
+  </head>
+  <body class="light-theme">
+    <div class="container">
+      <header class="header width-max">
+        <h1 class="font_26px">Devfinder</h1>
+        <div class="mode">
+          <p class="text_mode bold">DARK</p>
+          <img src="/assets/icon-moon.svg" alt="" class="icon" />
+        </div>
+      </header>
+      <section class="search_section width-max">
+        <div class="search_content width-max">
+          <img src="/assets/icon-search.svg" alt="" class="search_svg" />
+          <input
+            type="text"
+            class="input width-max"
+            placeholder="Search GitHub username…"
+          />
+          <div class="error_message">
+            <!-- <span class="no-results bold font_15px">No results</span>  -->
+          </div>
+
+          <div class="search_btn btn">
+            <p class="search_text bold">Search</p>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="result-container">
+          <div>
+            <img src="/assets/Bitmap.png" alt="" class="profile_img" />
+          </div>
+          <div class="result-container-content">
+            <div class="result-title font_15px">
+              <h2 class="font_26px bold">The Octocat</h2>
+              <p>Joined 25 Jan 2011</p>
+            </div>
+            <p class="twitter-text">@octocat</p>
+            <p class="bio-text font_15px">This profile has no bio</p>
+            <div class="stats-content">
+              <div class="Repos-content">
+                <p class="repos-text">Repos</p>
+                <p class="repos-number bold">8</p>
+              </div>
+              <div class="follower-content">
+                <p class="follower-text">Follower</p>
+                <p class="follower-number bold">3938</p>
+              </div>
+              <div class="following-content">
+                <p class="following-text">Following</p>
+                <p class="following-number bold">9</p>
+              </div>
+            </div>
+            <div class="links-container-1">
+              <div class="location-content links">
+                <img
+                  src="/assets/icon-location.svg"
+                  alt=""
+                  class="location-icon"
+                />
+                <p class="font_15px">San Francisco</p>
+              </div>
+              <div class="twitter-content links">
+                <img
+                  src="/assets/icon-twitter.svg"
+                  alt=""
+                  class="twitter-icon"
+                />
+                <p class="link_hover cursor_pointer">Not available</p>
+              </div>
+            </div>
+            <div class="links-container-2">
+              <div class="website-content links">
+                <img
+                  src="/assets/icon-website.svg"
+                  alt=""
+                  class="website-icon"
+                />
+                <p class="link_hover cursor_pointer">https://github.blog</p>
+              </div>
+              <div class="company-content links">
+                <img
+                  src="/assets/icon-company.svg"
+                  alt=""
+                  class="company-icon"
+                />
+                <p class="">@github</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/light_dark_mode.js"></script>
+  </body>
+</html>
