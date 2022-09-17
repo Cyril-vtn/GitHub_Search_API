@@ -150,7 +150,7 @@ textarea {
 }
 
 /* SEARCH RESULT */
-/* BOX CONTENT */
+
 .result {
   height: auto;
   width: 100%;
@@ -159,69 +159,32 @@ textarea {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
-.no-results {
+/* .no-results {
   margin: 0 24px;
   color: #f74646;
-}
+} */
+
 /* PROFILE PIC */
 .profile_img {
   border-radius: 50%;
-  margin-top: 48px;
-  margin-left: 48px;
   width: 70px;
   height: 70px;
 }
 
 /* CONTAINER */
-.result-container {
-  display: flex;
-  width: 100%;
-  gap: 37px;
-}
-
-.result-container-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 
 /* TITLE */
-.result-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 44px;
-}
-
-.result-title h2 {
-  color: var(--text-light-blue);
-}
-
-.result-title p {
-  margin-right: 48px;
-  color: var(--text-dark-grey);
-}
 
 /* TWITTER TEXT */
-.twitter-text {
-  margin-top: 2px;
-  color: var(--background-blue);
-}
 
 /* BIO TEXT */
-.bio-text {
-  margin-right: 48px;
-  margin-top: 20px;
-  color: var(--text-dark-grey);
-}
 
 /* STAT CONTAINER */
 .stats-content {
   display: flex;
-  margin-top: 32px;
-  padding-top: 15px;
-  padding-bottom: 17px;
-  width: 480px;
+
+  width: 279px;
+  height: 85px;
   background-color: var(--background-light-blue);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
@@ -230,79 +193,13 @@ textarea {
 }
 
 /* REPOS CONTENT */
-.Repos-content {
-  margin-left: 32px;
-}
-.Repos-content .repos-number {
-  margin-top: 1px;
-  font-size: 22px;
-  color: var(--text-light-blue);
-}
 
 /* FOLLOWER CONTENT */
-.follower-content {
-  margin-left: 99px;
-}
-
-.follower-content .follower-number {
-  margin-top: 1px;
-  font-size: 22px;
-  color: var(--text-light-blue);
-}
 
 /* FOLLOWING CONTENT */
-.following-content {
-  margin-left: 82px;
-}
-
-.following-content .following-number {
-  margin-top: 1px;
-  font-size: 22px;
-  color: var(--text-light-blue);
-}
 
 /* LINK CONTENT */
 
 /* SETUP HEIGHT ICON */
-/* .height-icon {
-  height: 50%;
-} */
-.links-container-1 {
-  display: flex;
-  margin-top: 37px;
-}
-.links-container-2 {
-  display: flex;
-  margin-top: 19px;
-  margin-bottom: 48px;
-}
-.location-content {
-  display: flex;
-  align-items: center;
-  gap: 19px;
-}
 
-.twitter-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-left: 120px;
-}
-
-.website-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.links-text {
-  color: var(--text-lighter-blue);
-}
-
-.company-content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-left: 52px;
-  margin-right: 20px;
-}
 /* tablet  */
