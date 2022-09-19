@@ -17,6 +17,7 @@
   --text-lighter-blue: var(--lighter_blue);
   --background-white: var(--white);
   --background-blue: var(--blue);
+  --joined_date: var(--dark_grey);
 }
 
 .dark-theme {
@@ -26,4 +27,5 @@
   --text-lighter-blue: var(--white);
   --background-white: var(--dark_blue);
   --background-blue: var(--blue);
+  --joined_date: #ffffff;
 }

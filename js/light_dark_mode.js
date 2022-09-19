@@ -6,6 +6,7 @@ btn.addEventListener("click", () => {
   const icon = document.querySelector(".icon");
   if (textMode.innerHTML === "DARK") {
     icon.src = "/assets/icon-sun.svg";
+
     textMode.innerHTML = "LIGHT";
   } else {
     textMode.innerHTML = "DARK";

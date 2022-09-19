@@ -18,29 +18,31 @@
 .cursor_pointer {
   cursor: pointer;
 }
+a {
+  color: var(--text-lighter-blue);
+}
 .link_hover {
   text-decoration: none;
 }
 .link_hover:hover {
   text-decoration: underline;
 }
+.link_hover:visited {
+  color: var(--text-lighter-blue);
+}
 
 /* -------------------------------- */
 /* ------- MOBILE FIRST -------- */
 /* -------------------------------- */
 body {
+  display: grid;
+  place-items: center;
   font-family: "Space Mono", monospace;
   background-color: var(--background-light-blue);
-  height: 100%;
+  height: 100vh;
   max-width: 327px;
   margin: auto;
   transition: 0.3s;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* HEADER  */
@@ -48,7 +50,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 144px;
+  /* margin-top: 144px; */
   color: var(--text-light-blue);
   margin-bottom: 36px;
 }
@@ -123,11 +125,11 @@ textarea {
 }
 
 .search_svg {
-  padding-left: 16px;
-  padding-right: 8px;
+  margin-left: 16px;
+  margin-right: 8px;
 }
 
-.search_btn {
+.btn {
   display: flex;
   height: 46px;
   width: 84px;
@@ -138,7 +140,7 @@ textarea {
   cursor: pointer;
 }
 
-.search_btn:hover {
+.btn:hover {
   opacity: 70%;
 }
 
@@ -152,54 +154,242 @@ textarea {
 /* SEARCH RESULT */
 
 .result {
-  height: auto;
+  height: 517px;
   width: 100%;
   background-color: var(--background-white);
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
-
-/* .no-results {
-  margin: 0 24px;
+.error_message {
+  margin-right: 24px;
+  width: 92px;
+}
+.no-results {
+  text-align: center;
   color: #f74646;
-} */
+}
 
-/* PROFILE PIC */
+/* CONTAINER */
+/* PROFILE CONTENT */
+
 .profile_img {
   border-radius: 50%;
   width: 70px;
   height: 70px;
 }
-
-/* CONTAINER */
-
-/* TITLE */
-
-/* TWITTER TEXT */
-
-/* BIO TEXT */
-
-/* STAT CONTAINER */
-.stats-content {
+.profile-result {
   display: flex;
+  padding-left: 23px;
+  padding-top: 32px;
+  padding-right: 70px;
+}
+.profile_result_pseudo_container {
+  padding-left: 19px;
+  line-height: 20px;
+}
+.pseudo {
+  color: var(--text-light-blue);
+  font-size: 16px;
+  font-family: "Space Mono", monospace;
+  font-weight: bold;
+}
+.pseudo_twitter {
+  margin-bottom: 25px;
+  font-size: 13px;
+  color: #0079ff;
+}
+.profile_creation {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--text-dark-grey);
+}
+/* BIO CONTENT */
+.profile_bio_container {
+  margin: 0 24px;
+  margin-top: 33px;
 
+  line-height: 25px;
+  color: var(--text-lighter-blue);
+  font-size: 13px;
+  font-family: "Space Mono", monospace;
+}
+/* STATS CONTENT */
+.profile_stats_container {
+  display: flex;
+  text-align: center;
+  margin: 24px;
   width: 279px;
   height: 85px;
-  background-color: var(--background-light-blue);
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  color: var(--text-dark-grey);
-  font-size: 13px;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--background-light-blue);
 }
 
 /* REPOS CONTENT */
 
-/* FOLLOWER CONTENT */
-
-/* FOLLOWING CONTENT */
+.profile_stat_text {
+  font-size: 11px;
+  color: var(--text-dark-grey);
+  margin-bottom: 8px;
+}
+.profile_stat_repos {
+  margin-left: 33px;
+}
+.profile_stat_number {
+  font-size: 16px;
+  color: var(--text-light-blue);
+}
 
 /* LINK CONTENT */
-
+.profile_link_container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-left: 24px;
+}
+.profile_link {
+  display: flex;
+  flex-direction: row;
+  gap: 13px;
+  color: var(--text-lighter-blue);
+}
+.fill_img {
+  fill: var(--text-lighter-blue);
+}
 /* SETUP HEIGHT ICON */
 
-/* tablet  */
+/* -------- tablet -------- */
+@media screen and (min-width: 573px) {
+  body {
+    max-width: 573px;
+  }
+  .result {
+    height: 481px;
+  }
+  /* SEARCH DIV */
+  .search_svg {
+    margin-left: 32px;
+    margin-right: 24px;
+  }
+  .input {
+    width: 100%;
+  }
+  .input::placeholder {
+    font-size: 18px;
+  }
+  .btn {
+    height: 50px;
+    width: 106px;
+    padding: 0 12px;
+  }
+  .search_text {
+    font-size: 16px;
+  }
+
+  /* PROFILE RESULT */
+  /* IMG / TITLE / DATE */
+  .profile_img_container {
+    margin-right: 41px;
+  }
+  .profile_img {
+    height: 117px;
+    width: 117px;
+  }
+  .profile-result {
+    padding: 40px;
+    padding-bottom: 0;
+  }
+  .profile_result_pseudo_container {
+    padding: 0;
+    line-height: 30px;
+  }
+  .pseudo {
+    font-size: 26px;
+  }
+  .pseudo_twitter {
+    font-size: 16px;
+  }
+  .profile_creation {
+    margin: 0;
+    font-size: 15px;
+  }
+  /* PROFILE BIO */
+  .profile_bio_container {
+    font-size: 15px;
+    margin: 0 40px;
+    margin-top: 24px;
+  }
+
+  /* PROFILE STATS */
+  .profile_stats_container {
+    gap: 0;
+    width: 493px;
+    height: 85px;
+    text-align: start;
+    margin: 32px 40px 30px 40px;
+  }
+  .profile_stat_text {
+    font-size: 13px;
+  }
+  .profile_stat_number {
+    font-size: 22px;
+  }
+  .profile_stat_repos {
+    margin-left: 32px;
+  }
+  .profile_stat_follower {
+    margin-left: 99px;
+  }
+  .profile_stat_following {
+    margin-left: 82px;
+  }
+
+  /* PROFILE LINK */
+
+  .profile_link_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 40px 0px 40px;
+  }
+  .profile_link {
+    margin-bottom: 25px;
+  }
+}
+/* COMPUTER */
+@media screen and (min-width: 730px) {
+  body {
+    max-width: 730px;
+  }
+  .profile-result {
+    padding: 48px 48px 0 48px;
+    padding-bottom: 0;
+  }
+  .profile_result_pseudo_container {
+    display: flex;
+    gap: 130px;
+    line-height: 40px;
+  }
+
+  .profile_bio_container {
+    position: relative;
+    margin: 0;
+    margin-right: 48px;
+    left: 206px;
+    bottom: 30px;
+    width: 470px;
+    font-size: 15px;
+  }
+
+  .profile_stats_container {
+    width: 480px;
+    margin-left: 202px;
+    margin-top: 0;
+  }
+  .profile_link_container {
+    margin: 37px 48px 48px 202px;
+  }
+}
