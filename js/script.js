@@ -157,6 +157,7 @@ input.addEventListener("keypress", function (event) {
   }
 });
 
+// ------------ API DATA -------------
 // avatar_url: "https://avatars.githubusercontent.com/u/108680561?v=4"
 // bio: null
 // blog: ""
