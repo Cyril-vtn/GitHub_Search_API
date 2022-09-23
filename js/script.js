@@ -7,9 +7,7 @@ input.focus(input);
 
 async function callData() {
   const resultSection = document.querySelector(".result");
-  const links = document.querySelectorAll(".links");
   const errorMessage = document.querySelector(".error_message");
-  console.log(input);
   try {
     // Call the API
     const res = await fetch(`https://api.github.com/users/${input.value}`);
@@ -67,7 +65,7 @@ async function callData() {
           </div>
         </section>
         <section class="profile_link_container">
-          <div class="profile_link">
+          <div class="profile_link ${data.location ? "" : "unavailable"}">
             <svg height="20" width="14" xmlns="http://www.w3.org/2000/svg">
               <path
                 class="fill_img"
@@ -75,11 +73,11 @@ async function callData() {
                 fill="#4b6a9b"
               />
             </svg>
-            <p class="profile_location_text">${
+            <p class="profile_location_text link">${
               data.location ? data.location : "Not available"
             }</p>
           </div>
-          <div class="profile_link">
+          <div class="profile_link ${data.html_url ? "" : "unavailable"}">
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g fill="#4b6a9b">
                 <path
@@ -94,11 +92,13 @@ async function callData() {
             </svg>
             <a target="_blank"  href="${
               data.html_url ? data.html_url : "#"
-            }"class="profile_website_text link_hover">${
+            }"class="profile_website_text link link_hover">${
         data.html_url ? data.html_url : "Not available"
       }</a>
           </div>
-          <div class="profile_link">
+          <div class="profile_link ${
+            data.twitter_username ? "" : "unavailable"
+          }">
             <svg height="18" width="20" xmlns="http://www.w3.org/2000/svg">
               <path
                 class="fill_img"
@@ -107,13 +107,13 @@ async function callData() {
               />
             </svg>
 
-            <p class="profile_twitter_text">${
+            <p class="profile_twitter_text link">${
               data.twitter_username
                 ? `https://twitter.com/${data.twitter_username}`
                 : "Not available"
             } </p>
           </div>
-          <div class="profile_link">
+          <div class="profile_link ${data.company ? "" : "unavailable"}">
             <svg height="20" width="20" xmlns="http://www.w3.org/2000/svg">
               <g class="fill_img" fill="#4b6a9b">
                 <path
@@ -121,7 +121,7 @@ async function callData() {
                 />
               </g>
             </svg>
-            <p class="profile_company_text">${
+            <p class="profile_company_text link">${
               data.company ? data.company : "Not available"
             }</p>
           </div>
@@ -135,7 +135,6 @@ async function callData() {
       // delete error message
       errorMessage.innerHTML = "";
       // display result
-
       resultSection.innerHTML += html;
     }
   } catch (err) {
