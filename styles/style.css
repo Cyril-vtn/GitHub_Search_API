@@ -58,22 +58,51 @@ body {
 h1 {
   font-weight: 700;
 }
-
+/* DARK AND LIGHT */
 .mode {
   display: flex;
   align-items: center;
-  color: var(--text-dark-grey);
+  /* color: var(--text-dark-grey); */
   gap: 16px;
   cursor: pointer;
 }
-.mode:hover {
-  filter: brightness(5%) saturate(0%);
-  color: var(--text-light-blue);
+/* DARK AND LIGHT TEXT */
+.dark {
+  color: #4b6a9b;
+}
+.light {
+  color: #ffffff;
+}
+.mode:hover .dark {
+  color: #222731;
+}
+.mode:hover .light {
+  color: #90a4d4;
 }
 
 .text_mode {
   font-size: 13px;
   letter-spacing: 2.5px;
+}
+/* DARK SVG */
+
+.pathDark {
+  fill: #4b6a9b;
+}
+/* LIGHT SVG */
+.pathLight {
+  fill: #ffffff;
+}
+
+/* ------HOVER SVG------ */
+/* DARK SVG */
+
+.mode:hover .icon .pathDark {
+  fill: #222731;
+}
+/* LIGHT SVG */
+.mode:hover .icon .pathLight {
+  fill: #90a4d4;
 }
 
 /* SEARCH INPUT */
