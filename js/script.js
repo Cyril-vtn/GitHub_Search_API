@@ -18,6 +18,7 @@ async function callData() {
     // render APi to the html
     input.value = "";
     if (data.message === "Not Found") {
+      document.getElementById("error").style.display = "block";
       errorMessage.innerHTML = `<span class="no-results bold font_15px">No results</span>`;
     } else {
       const html = `
